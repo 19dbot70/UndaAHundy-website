@@ -1,0 +1,22 @@
+---
+// Site-wide footer — global tagline + social.
+const year = new Date().getFullYear();
+const social = [
+  { href: 'https://instagram.com/undaahundy', label: 'Instagram' },
+  { href: 'https://tiktok.com/@undaahundy', label: 'TikTok' },
+  { href: 'https://facebook.com/undaahundy', label: 'Facebook' },
+  { href: 'mailto:hello@undaahundy.com', label: 'Email' },
+];
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="tagline">Celebrate Progress. Not Perfection.</p>
+    <div class="social">
+      {social.map((item) => (
+        <a href={item.href} rel="noopener">{item.label}</a>
+      ))}
+    </div>
+    <p class="meta">© {year} Unda A Hundy. Built for golfers who know the grind.</p>
+  </div>
+</footer>

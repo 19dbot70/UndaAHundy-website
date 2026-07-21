@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import WhereIAmToday from '../components/WhereIAmToday.astro';
+
+// Coming Soon landing — Phase 1 of the Unda A Hundy build.
+// Source copy: ../../copy-draft-pages-v1.md (sections 1: Home).
+// Goal of this page: announce the brand is launching soon, give a clear sense of
+// the brand voice, show the founder's actual stats (Where I'm At Today), and
+// let people join the email list once we wire it up.
+---
+
+<BaseLayout
+  title="Unda A Hundy — Golf gear for the ones still chasin' 99"
+  description="Black-owned golf lifestyle brand. The Road to 99 starts here. Coming soon — celebrate progress, not perfection."
+>
+  <section class="hero">
+    <div class="container">
+      <img src="/logo.svg" alt="Unda A Hundy" class="hero-mark" />
+      <span class="coming-soon-banner">Drop Incoming</span>
+      <h1>Golf gear for the ones<br />still chasin' 99.</h1>
+      <p class="lede">
+        For the everyday golfer chasing better rounds — not perfection.
+      </p>
+      <div class="pills">
+        <span class="pill">Black-owned</span>
+        <span class="pill">Community-driven</span>
+        <span class="pill">Built for the grind</span>
+      </div>
+      <div class="btn-row" style="justify-content: center;">
+        <a class="btn btn--primary" href="#notify">Get on the list</a>
+        <a class="btn btn--ghost" href="/road-to-99">Follow the Road</a>
+      </div>
+    </div>
+  </section>
+
+  <WhereIAmToday />
+
+  <section class="mission">
+    <div class="container">
+      <h2>The Mission</h2>
+      <p>
+        Most golf brands celebrate scratch golfers.
+      </p>
+      <p>
+        We celebrate the golfer who shoots 102 today...
+        98 next month...
+        and never stops chasing improvement.
+      </p>
+      <p>
+        Unda A Hundy was created for the millions of golfers who work all week,
+        play on weekends, laugh through bad rounds, celebrate personal bests,
+        and know that breaking 100 isn't just a score — it's a milestone.
+      </p>
+      <p>
+        Because every golfer remembers their first time going under 100.
+      </p>
+      <p style="color: var(--uah-gold); font-weight: 700; font-family: var(--uah-font-display); font-size: 1.4rem; letter-spacing: 0.04em; text-align: center; margin-top: 24px;">
+        We're here for that journey.
+      </p>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="container">
+      <h2>Be the first to know.</h2>
+      <p>
+        We're launching with apparel for the Break 100 Club and a public journey
+        to breaking 99. Get on the list for the first drop, behind-the-scenes
+        content, and the occasional bad-round story.
+      </p>
+      <div id="notify" class="btn-row" style="justify-content: center;">
+        <a class="btn btn--primary" href="mailto:hello@undaahundy.com?subject=Put%20me%20on%20the%20UAH%20list">
+          Email hello@undaahundy.com
+        </a>
+        <a class="btn btn--ghost" href="/break-100-club">What is the Break 100 Club?</a>
+      </div>
+      <p style="margin-top: 24px; font-size: 0.9rem; color: var(--uah-gray-500);">
+        Newsletter signup coming with Phase 2. For now, drop us an email and we'll add you by hand.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

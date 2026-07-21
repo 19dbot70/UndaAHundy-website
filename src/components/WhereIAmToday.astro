@@ -1,0 +1,33 @@
+---
+import stats from '../data/stats.json';
+// "Where I'm At Today" — Daron's actual golf stats, updated as his journey progresses.
+// Source of truth: ../../stats-current.json (the project root one). This file is a
+// build-time copy that lives inside the Astro project so the component can import
+// JSON at build time. Update both together when stats change.
+---
+
+<section class="tight" aria-label="Where I'm At Today">
+  <div class="container">
+    <div class="stats-card">
+      <h3>Where I'm At Today</h3>
+      <dl>
+        <div>
+          <dt>Current Goal</dt>
+          <dd>{stats.currentGoal}</dd>
+        </div>
+        <div>
+          <dt>Best Round</dt>
+          <dd>{stats.bestRound}</dd>
+        </div>
+        <div>
+          <dt>Current Focus</dt>
+          <dd>{stats.currentFocus}</dd>
+        </div>
+        <div>
+          <dt>Handicap</dt>
+          <dd>{stats.handicap}</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>

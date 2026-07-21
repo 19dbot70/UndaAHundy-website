@@ -1,0 +1,31 @@
+---
+// Site-wide header — brand mark + nav.
+// Nav order locked in IA v1: Home / Apparel / Road to 99 / Break 100 Club / About / Contact
+const nav = [
+  { href: '/', label: 'Home' },
+  { href: '/apparel', label: 'Apparel' },
+  { href: '/road-to-99', label: 'Road to 99' },
+  { href: '/break-100-club', label: 'Break 100 Club' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" aria-label="Unda A Hundy — home">
+      <img src="/logo.svg" alt="Unda A Hundy" class="brand-mark" />
+    </a>
+    <nav aria-label="Primary">
+      {nav.map((item) => (
+        <a
+          href={item.href}
+          aria-current={currentPath === item.href ? 'page' : undefined}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>

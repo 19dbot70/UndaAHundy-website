@@ -1,0 +1,38 @@
+# Unda A Hundy — Netlify config
+# https://docs.netlify.com/configure-netlify/netlify-config-file/
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+# Headers — security + performance baseline.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Long-cache static assets.
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Force HTTPS + canonical host (undaahundy.com, no www).
+# www -> apex (apex preferred for brand consistency, same as TechCerns pattern)
+[[redirects]]
+  from = "https://www.undaahundy.com/*"
+  to = "https://undaahundy.com/:splat"
+  status = 301
+  force = true
+
+# TODO at launch: enable HSTS after DNS cutover succeeds.
+# [[headers]]
+#   for = "/*"
+#   [headers.values]
+#     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"

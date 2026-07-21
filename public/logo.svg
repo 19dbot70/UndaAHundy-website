@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="240" viewBox="0 0 480 240">
+  <!-- Solid black backdrop box (wide enough to cover original brand text) -->
+  <rect x="0" y="0" width="480" height="240" rx="28" ry="28" fill="#000000"/>
+  
+  <!-- Big capital U -->
+  <text x="240" y="125" 
+        font-family="Arial Black, Helvetica, sans-serif" 
+        font-size="135" 
+        font-weight="900" 
+        fill="#F5C518" 
+        text-anchor="middle">U</text>
+  
+  <!-- Underscore line -->
+  <line x1="160" y1="150" x2="320" y2="150" stroke="#F5C518" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- 99 below the underscore -->
+  <text x="240" y="210" 
+        font-family="Arial Black, Helvetica, sans-serif" 
+        font-size="52" 
+        font-weight="900" 
+        fill="#F5C518" 
+        text-anchor="middle">99</text>
+</svg>
