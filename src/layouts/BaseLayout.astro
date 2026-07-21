@@ -30,14 +30,14 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
     <meta property="og:url" content={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL('/logo.svg', Astro.site).toString()} />
+    <meta property="og:image" content={new URL('/hero-logo.jpg', Astro.site).toString()} />
     <meta property="og:site_name" content="Unda A Hundy" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL('/logo.svg', Astro.site).toString()} />
+    <meta name="twitter:image" content={new URL('/hero-logo.jpg', Astro.site).toString()} />
 
     <!-- Brand display font (free, hosted by Google) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

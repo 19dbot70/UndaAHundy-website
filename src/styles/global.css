@@ -145,6 +145,19 @@ section.tight { padding: 48px 0; }
   height: 44px;
   width: auto;
 }
+.site-header .brand-wordmark {
+  font-family: var(--uah-font-display);
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--uah-white);
+  line-height: 1;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.site-header .brand-wordmark:hover {
+  color: var(--uah-gold);
+}
 .site-header nav {
   display: flex;
   gap: 28px;
@@ -203,9 +216,11 @@ section.tight { padding: 48px 0; }
   text-align: center;
 }
 .hero .hero-mark {
-  width: 280px;
-  max-width: 70vw;
+  width: 360px;
+  max-width: 75vw;
   margin: 0 auto 40px;
+  height: auto;
+  border-radius: 8px;
 }
 .hero h1 {
   margin-bottom: 24px;
