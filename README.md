@@ -46,6 +46,7 @@ npm run preview   # preview built site
 
 ## Reference
 
+
 - `../build-plan-v1.md` — 10-phase build plan
 - `../copy-draft-pages-v1.md` — site copy (Home, About, Apparel, Road to 99, Break 100 Club, Contact)
 - `../ia-decisions-v1.md` — nav order, "Where I'm At Today" scope, email destination
