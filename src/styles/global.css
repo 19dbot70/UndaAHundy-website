@@ -246,16 +246,61 @@ section.tight { padding: 48px 0; }
 
 /* Mission */
 .mission {
-  background: var(--uah-gray-700);
-  border-top: 1px solid var(--uah-gray-700);
-  border-bottom: 1px solid var(--uah-gray-700);
+  background: var(--uah-white);
+  color: var(--uah-black);
 }
 .mission .container { max-width: 760px; }
-.mission h2 { text-align: center; }
+.mission h2 {
+  text-align: center;
+  color: var(--uah-black);
+}
 .mission p {
   font-size: 1.05rem;
-  color: var(--uah-gray-100);
+  color: #2A2A2A;
   line-height: 1.7;
+}
+
+/* Founder Story */
+.founder {
+  background: var(--uah-white);
+  color: var(--uah-black);
+  padding-top: 0;
+}
+.founder .founder-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #FAFAFA;
+  border-top: 4px solid var(--uah-gold);
+  border-radius: var(--uah-radius);
+  padding: 40px 48px;
+  text-align: center;
+}
+.founder .founder-label {
+  display: inline-block;
+  font-family: var(--uah-font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--uah-gold);
+  margin-bottom: 16px;
+}
+.founder h2 {
+  color: var(--uah-black);
+  margin-bottom: 24px;
+}
+.founder p {
+  font-size: 1.05rem;
+  color: #2A2A2A;
+  line-height: 1.7;
+  margin-bottom: 1em;
+}
+.founder .founder-signature {
+  font-family: var(--uah-font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.06em;
+  color: var(--uah-gold);
+  margin-top: 24px;
+  text-transform: uppercase;
 }
 
 /* Where I'm At Today card */
@@ -330,4 +375,5 @@ section.tight { padding: 48px 0; }
   .site-header nav { gap: 16px; }
   .site-header nav a { font-size: 0.75rem; }
   .stats-card dl { grid-template-columns: 1fr; }
+  .founder .founder-card { padding: 28px 24px; }
 }
