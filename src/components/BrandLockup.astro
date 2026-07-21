@@ -1,0 +1,39 @@
+---
+// BrandLockup — the full UAH brand lockup (U/99 + UNDA A HUNDY + tagline).
+// Use this anywhere you want the brand to land. The JPG is the canonical source
+// from projects/unda-a-hundy/posts/post-5-grass-greens-same-muscles/assets/UAH-Live-Unda-logo.JPG.
+// Component props let you tune size + tagline visibility per page.
+interface Props {
+  size?: number;        // max-width in px (default 360)
+  showTagline?: boolean; // show the gold "BREAK 100. LIVE UNDA." tagline (default true)
+  alt?: string;
+}
+
+const {
+  size = 360,
+  showTagline = true,
+  alt = "Unda A Hundy — Road to 99",
+} = Astro.props;
+---
+
+<img
+  src="/hero-logo.jpg"
+  alt={alt}
+  class="brand-lockup"
+  style={`max-width: ${size}px;`}
+/>
+{showTagline && (
+  <style>
+    /* Tagline shown via separate element below if needed */
+  </style>
+)}
+
+<style>
+  .brand-lockup {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0;
+  }
+</style>
