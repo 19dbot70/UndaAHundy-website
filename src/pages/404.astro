@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import BrandLockup from '../components/BrandLockup.astro';
 ---
 
 <BaseLayout
@@ -9,7 +8,7 @@ import BrandLockup from '../components/BrandLockup.astro';
 >
   <section class="hero">
     <div class="container">
-      <BrandLockup size={280} />
+      <img src="/logo-mark.svg" alt="Unda A Hundy" class="brand-mark-hero" />
       <h1>Off the fairway.</h1>
       <p class="lede">
         That page doesn't exist. Yet. We're still building the course.
@@ -21,3 +20,12 @@ import BrandLockup from '../components/BrandLockup.astro';
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .brand-mark-hero {
+    width: 110px;
+    height: auto;
+    display: block;
+    margin: 0 auto 24px;
+  }
+</style>
