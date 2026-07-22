@@ -25,8 +25,8 @@ html, body { margin: 0; padding: 0; }
 }
 
 html {
-  background: var(--uah-black);
-  color: var(--uah-white);
+  background: var(--uah-white);
+  color: #1A1A1A;
   font-family: var(--uah-font-body);
   font-size: 17px;
   line-height: 1.6;
@@ -38,8 +38,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: var(--uah-black);
-  color: var(--uah-white);
+  background: var(--uah-white);
+  color: #1A1A1A;
 }
 
 main {
@@ -105,12 +105,12 @@ p { margin: 0 0 1em 0; }
 
 .btn--ghost {
   background: transparent;
-  color: var(--uah-white);
-  border-color: var(--uah-white);
+  color: #1A1A1A;
+  border-color: #1A1A1A;
 }
 .btn--ghost:hover {
-  background: var(--uah-white);
-  color: var(--uah-black);
+  background: #1A1A1A;
+  color: var(--uah-white);
   transform: translateY(-1px);
 }
 
@@ -127,8 +127,8 @@ section.tight { padding: 48px 0; }
 
 /* Header / Footer */
 .site-header {
-  border-bottom: 1px solid var(--uah-gray-700);
-  background: var(--uah-black);
+  border-bottom: 1px solid #E5E5E5;
+  background: var(--uah-white);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -161,7 +161,7 @@ section.tight { padding: 48px 0; }
   font-size: clamp(1.4rem, 2.8vw, 1.85rem);
   font-weight: 700;
   letter-spacing: 0.06em;
-  color: var(--uah-white);
+  color: #1A1A1A;
   text-transform: uppercase;
   white-space: nowrap;
   line-height: 1;
@@ -172,7 +172,7 @@ section.tight { padding: 48px 0; }
   align-items: center;
 }
 .site-header nav a {
-  color: var(--uah-white);
+  color: #1A1A1A;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -181,8 +181,8 @@ section.tight { padding: 48px 0; }
 .site-header nav a:hover { color: var(--uah-gold); }
 
 .site-footer {
-  background: var(--uah-black);
-  border-top: 1px solid var(--uah-gray-700);
+  background: var(--uah-white);
+  border-top: 1px solid #E5E5E5;
   padding: 48px 0 32px;
   margin-top: 80px;
 }
@@ -207,7 +207,7 @@ section.tight { padding: 48px 0; }
   margin-bottom: 16px;
 }
 .site-footer .social a {
-  color: var(--uah-gray-300);
+  color: #4A4A4A;
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -218,7 +218,7 @@ section.tight { padding: 48px 0; }
 /* Hero */
 .hero {
   padding: 100px 0 80px;
-  background: var(--uah-black);
+  background: var(--uah-white);
   text-align: center;
 }
 .hero .hero-mark,
@@ -254,7 +254,7 @@ section.tight { padding: 48px 0; }
   font-size: 1.15rem;
   max-width: 640px;
   margin: 0 auto 32px;
-  color: var(--uah-gray-100);
+  color: #4A4A4A;
 }
 .hero .pills {
   display: flex;
@@ -335,8 +335,8 @@ section.tight { padding: 48px 0; }
 
 /* Where I'm At Today card */
 .stats-card {
-  background: linear-gradient(180deg, var(--uah-gray-700) 0%, #1a1a1a 100%);
-  border: 1px solid var(--uah-gray-700);
+  background: #FAFAFA;
+  border: 1px solid #E5E5E5;
   border-left: 4px solid var(--uah-gold);
   border-radius: var(--uah-radius);
   padding: 28px 32px;
@@ -361,14 +361,14 @@ section.tight { padding: 48px 0; }
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--uah-gray-500);
+  color: #6E6E6E;
   margin-bottom: 2px;
 }
 .stats-card dd {
   margin: 0;
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--uah-white);
+  color: #1A1A1A;
 }
 
 /* Coming Soon banner */
