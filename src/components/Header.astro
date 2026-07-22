@@ -14,8 +14,9 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 
 <header class="site-header">
   <div class="container">
-    <a href="/" aria-label="Unda A Hundy — home" class="brand-mark-link">
-      <img src="/logo-mark.svg" alt="Unda A Hundy" class="brand-mark" />
+    <a href="/" aria-label="Unda A Hundy — home" class="brand-lockup-link">
+      <img src="/logo-mark.svg" alt="" class="brand-mark" aria-hidden="true" />
+      <span class="brand-wordmark">UNDA A HUNDY</span>
     </a>
     <nav aria-label="Primary">
       {nav.map((item) => (
