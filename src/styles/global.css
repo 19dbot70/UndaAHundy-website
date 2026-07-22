@@ -178,6 +178,27 @@ section.tight { padding: 48px 0; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+.site-header .header-cta {
+  display: inline-flex;
+  align-items: center;
+  background: var(--uah-gold);
+  color: var(--uah-black);
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-family: var(--uah-font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-left: 16px;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.site-header .header-cta:hover {
+  background: var(--uah-gold-soft);
+  color: var(--uah-black);
+  transform: translateY(-1px);
+}
 .site-header nav a:hover { color: var(--uah-gold); }
 
 .site-footer {
