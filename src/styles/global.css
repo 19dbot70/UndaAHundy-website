@@ -222,30 +222,13 @@ section.tight { padding: 48px 0; }
   text-align: center;
 }
 .hero .hero-mark,
+.hero .hero-logo-full,
 .hero .brand-lockup {
-  width: 220px;
-  max-width: 50vw;
-  margin: 0 auto 24px;
+  width: 360px;
+  max-width: 80vw;
+  margin: 0 auto 32px;
   height: auto;
   border-radius: 0;
-}
-.hero .hero-wordmark {
-  font-family: var(--uah-font-display);
-  font-size: clamp(2rem, 5vw, 3rem);
-  letter-spacing: 0.08em;
-  color: #1A1A1A;
-  text-transform: uppercase;
-  margin: 0 auto 8px;
-  font-weight: 700;
-}
-.hero .hero-tagline {
-  font-family: var(--uah-font-display);
-  font-size: clamp(0.85rem, 1.6vw, 1rem);
-  letter-spacing: 0.18em;
-  color: var(--uah-gold);
-  text-transform: uppercase;
-  margin: 0 auto 32px;
-  font-weight: 700;
 }
 .hero h1 {
   margin-bottom: 24px;
@@ -298,11 +281,12 @@ section.tight { padding: 48px 0; }
 }
 .founder .founder-photo {
   display: block;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  width: 280px;
+  max-width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: 12px;
   object-fit: cover;
-  object-position: 50% 20%;
+  object-position: 50% 50%;
   margin: 0 auto 24px;
   border: 3px solid var(--uah-gold);
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
