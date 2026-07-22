@@ -142,14 +142,14 @@ section.tight { padding: 48px 0; }
   padding-bottom: 16px;
 }
 .site-header .brand-mark {
-  height: 64px;
+  height: 96px;
   width: auto;
   display: block;
 }
 .site-header .brand-lockup-link {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   line-height: 1;
   text-decoration: none;
 }
@@ -158,7 +158,7 @@ section.tight { padding: 48px 0; }
 }
 .site-header .brand-wordmark {
   font-family: var(--uah-font-display);
-  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+  font-size: clamp(1.4rem, 2.8vw, 1.85rem);
   font-weight: 700;
   letter-spacing: 0.06em;
   color: var(--uah-white);
