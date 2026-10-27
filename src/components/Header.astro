@@ -1,14 +1,18 @@
 ---
 // Site-wide header — brand mark + nav.
 // Nav order locked in IA v1: Home / Apparel / Road to 99 / Break 100 Club / About / Contact
+// The pages ship in stages, so every entry carries a `live` flag. Only routes that
+// actually exist get rendered — flip a flag to true the day its .astro file lands.
+// Audited 2026-10-27: five nav links were live-linking to 404s.
 const nav = [
-  { href: '/', label: 'Home' },
-  { href: '/apparel', label: 'Apparel' },
-  { href: '/road-to-99', label: 'Road to 99' },
-  { href: '/break-100-club', label: 'Break 100 Club' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/', label: 'Home', live: true },
+  { href: '/apparel', label: 'Apparel', live: false },
+  { href: '/road-to-99', label: 'Road to 99', live: false },
+  { href: '/break-100-club', label: 'Break 100 Club', live: false },
+  { href: '/about', label: 'About', live: false },
+  { href: '/contact', label: 'Contact', live: false },
 ];
+const liveNav = nav.filter((item) => item.live);
 const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 ---
 
@@ -17,16 +21,18 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
     <a href="/" aria-label="Unda A Hundy — home" class="brand-lockup-link">
       <img src="/images/hero-logo-transparent.png?v=1" alt="Unda A Hundy — U/99 mark, wordmark, and BREAK 100. LIVE UNDA. tagline" class="brand-mark" />
     </a>
-    <nav aria-label="Primary">
-      {nav.map((item) => (
-        <a
-          href={item.href}
-          aria-current={currentPath === item.href ? 'page' : undefined}
-        >
-          {item.label}
-        </a>
-      ))}
-    </nav>
+    {liveNav.length > 1 && (
+      <nav aria-label="Primary">
+        {liveNav.map((item) => (
+          <a
+            href={item.href}
+            aria-current={currentPath === item.href ? 'page' : undefined}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+    )}
     <a href="/#notify" class="header-cta">Get on the list</a>
   </div>
 </header>
