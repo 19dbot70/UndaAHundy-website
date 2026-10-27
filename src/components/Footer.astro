@@ -1,6 +1,16 @@
 ---
-// Site-wide footer — global tagline + social.
+// Site-wide footer — tagline + secondary nav + social.
 const year = new Date().getFullYear();
+// Secondary nav per IA v1 Decision 1: the footer carries the full page list,
+// so every page is one click from every other page.
+const nav = [
+  { href: '/', label: 'Home' },
+  { href: '/apparel', label: 'Apparel' },
+  { href: '/road-to-99', label: 'Road to 99' },
+  { href: '/break-100-club', label: 'Break 100 Club' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
 const social = [
   { href: 'https://instagram.com/undaahundy', label: 'Instagram' },
   { href: 'https://tiktok.com/@undaahundy', label: 'TikTok' },
@@ -12,6 +22,11 @@ const social = [
 <footer class="site-footer">
   <div class="container">
     <p class="tagline">Celebrate Progress. Not Perfection.</p>
+    <nav class="footer-nav" aria-label="Footer">
+      {nav.map((item) => (
+        <a href={item.href}>{item.label}</a>
+      ))}
+    </nav>
     <div class="social">
       {social.map((item) => (
         <a href={item.href} rel="noopener">{item.label}</a>
