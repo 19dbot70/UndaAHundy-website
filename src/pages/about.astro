@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+// About — brand story + founder story (IA v1: /about/ = Brand story + Founder story).
+// Copy source: ../../copy-draft-pages-v1.md section 2.
+---
+
+<BaseLayout
+  title="About — Unda A Hundy"
+  description="Golf has never been just about the score. Unda A Hundy is a Black-owned golf lifestyle brand built for the everyday golfer, not the tour pro."
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">About</span>
+      <h1>Golf was never just about the score.</h1>
+      <p class="lede">
+        It's about showing up after a terrible round. Coming back after slicing every
+        drive. Celebrating that one pure iron shot. And believing next weekend might
+        finally be the weekend.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="prose">
+        <p class="statement">That's why Unda A Hundy exists.</p>
+        <p>
+          We're a Black-owned golf lifestyle brand built for the everyday golfer.
+          Not the tour pro.
+        </p>
+        <p>
+          Our community is made up of golfers who shoot in the 90s...
+          the 100s...
+          and sometimes well above that.
+        </p>
+        <p>We know improvement isn't linear.</p>
+        <p>
+          Some days you shoot your personal best.
+          Some days golf humbles you.
+        </p>
+        <p class="statement">Either way... You're coming back.</p>
+        <p>
+          Our apparel represents that mindset. Every hat. Every shirt. Every design.
+          It's a reminder that progress always beats perfection.
+        </p>
+        <p>
+          The scorecard tells the truth...
+          <br />
+          but the chase is what keeps us coming back.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder">
+    <div class="container">
+      <div class="founder-card">
+        <img
+          src="/images/founders-daron.jpg"
+          alt="Daron Walker, founder of Unda A Hundy, in his UAH gear"
+          class="founder-photo"
+        />
+        <span class="founder-label">From the Founder</span>
+        <h2>Hi, I'm Daron.</h2>
+        <p>
+          Like millions of golfers, I'm chasing that elusive milestone of consistently
+          breaking 100.
+        </p>
+        <p>
+          I'm not pretending to be a golf instructor.<br />
+          I'm not pretending to be a scratch golfer.
+        </p>
+        <p>I'm documenting the real journey.</p>
+        <p>
+          The good rounds.<br />
+          The frustrating rounds.<br />
+          The workouts.<br />
+          The lessons.<br />
+          The failures.<br />
+          The wins.
+        </p>
+        <p>
+          Unda A Hundy is my way of bringing golfers together who understand that
+          improvement is worth celebrating.
+        </p>
+        <p style="font-weight: 600; color: var(--uah-black); margin-bottom: 0;">
+          If you're still chasing your best round...
+        </p>
+        <p style="font-family: var(--uah-font-display); font-size: 1.4rem; letter-spacing: 0.04em; color: var(--uah-gold); margin-bottom: 0;">
+          You're one of us.
+        </p>
+        <p class="founder-signature">— Daron Walker, Founder</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="container">
+      <h2>Welcome to the Break 100 Club.</h2>
+      <p>
+        If you're shooting in the 90s, the 100s, or somewhere worse on the bad days,
+        you're in the right place. Come see what we're building.
+      </p>
+      <div class="btn-row" style="justify-content: center;">
+        <a class="btn btn--primary" href="/break-100-club">Join the Club</a>
+        <a class="btn btn--ghost" href="/road-to-99">Follow the Road to 99</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

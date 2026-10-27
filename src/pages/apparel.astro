@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import WhereIAmToday from '../components/WhereIAmToday.astro';
+// Apparel — core commerce page (IA v1: /apparel/ = collections + products).
+// Copy source: ../../copy-draft-pages-v1.md section 3.
+// No products are live yet, so collections render as Coming Soon. There are no
+// prices, no product photos, and no Snipcart wiring until the first drop has real
+// products behind it.
+const collections = [
+  {
+    name: 'Break 100 Club',
+    blurb: 'The collection for the golfer chasing a first round under 100.',
+  },
+  {
+    name: "Still Chasin' 99",
+    blurb: 'For the ones who are not done yet, and are not planning to stop.',
+  },
+  {
+    name: 'Signature UAH',
+    blurb: 'The core marks. Clean, simple, and built to be worn every week.',
+  },
+];
+const wearIt = ['On the course', 'At the driving range', 'In the clubhouse', 'Around town'];
+---
+
+<BaseLayout
+  title="Apparel — Unda A Hundy"
+  description="Golf apparel for the ones still chasin' 99. Clean, everyday style you can wear on the course, at the range, in the clubhouse, and around town."
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Apparel</span>
+      <h1>Apparel Built for the Journey</h1>
+      <p class="lede">
+        Golf apparel shouldn't only represent the golfers who shoot in the 70s.
+        It should represent the golfers putting in the work every weekend.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="prose prose--center">
+        <p>That's why every Unda A Hundy piece is designed around clean, everyday style you can wear:</p>
+      </div>
+      <ul class="beat-list" style="margin-top: 32px;">
+        {wearIt.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+      <div class="prose prose--center" style="margin-top: 40px;">
+        <p class="statement">Our designs are intentionally simple.</p>
+        <p>Because confidence never needs to be loud.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--soft">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 32px;">Current Collections</h2>
+      <div class="card-grid">
+        {collections.map((collection) => (
+          <div class="card">
+            <h3>{collection.name}</h3>
+            <p>{collection.blurb}</p>
+            <span class="card-status">Coming Soon</span>
+          </div>
+        ))}
+      </div>
+      <p style="text-align: center; margin-top: 32px; color: var(--uah-gray-500); font-size: 0.95rem;">
+        The first drop is hats, tees, and sweatshirts. Get on the list and you'll hear
+        when it lands.
+      </p>
+    </div>
+  </section>
+
+  <WhereIAmToday />
+
+  <section class="cta-final">
+    <div class="container">
+      <h2>Get the first drop.</h2>
+      <p>
+        Join the list for first access to the Break 100 Club launch, plus behind-the-scenes
+        content from the Road to 99.
+      </p>
+      <div class="btn-row" style="justify-content: center;">
+        <a
+          class="btn btn--primary"
+          href="mailto:hello@undaahundy.com?subject=Put%20me%20on%20the%20UAH%20list"
+        >
+          Join the list
+        </a>
+        <a class="btn btn--ghost" href="/break-100-club">Break 100 Club</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

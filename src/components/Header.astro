@@ -6,11 +6,11 @@
 // Audited 2026-10-27: five nav links were live-linking to 404s.
 const nav = [
   { href: '/', label: 'Home', live: true },
-  { href: '/apparel', label: 'Apparel', live: false },
-  { href: '/road-to-99', label: 'Road to 99', live: false },
-  { href: '/break-100-club', label: 'Break 100 Club', live: false },
-  { href: '/about', label: 'About', live: false },
-  { href: '/contact', label: 'Contact', live: false },
+  { href: '/apparel', label: 'Apparel', live: true },
+  { href: '/road-to-99', label: 'Road to 99', live: true },
+  { href: '/break-100-club', label: 'Break 100 Club', live: true },
+  { href: '/about', label: 'About', live: true },
+  { href: '/contact', label: 'Contact', live: true },
 ];
 const liveNav = nav.filter((item) => item.live);
 const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
@@ -22,17 +22,40 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
       <img src="/images/hero-logo-transparent.png?v=1" alt="Unda A Hundy — U/99 mark, wordmark, and BREAK 100. LIVE UNDA. tagline" class="brand-mark" />
     </a>
     {liveNav.length > 1 && (
-      <nav aria-label="Primary">
-        {liveNav.map((item) => (
-          <a
-            href={item.href}
-            aria-current={currentPath === item.href ? 'page' : undefined}
-          >
-            {item.label}
-          </a>
-        ))}
-      </nav>
+      <>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav id="site-nav" aria-label="Primary">
+          {liveNav.map((item) => (
+            <a
+              href={item.href}
+              aria-current={currentPath === item.href ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      </>
     )}
     <a href="/#notify" class="header-cta">Get on the list</a>
   </div>
 </header>
+
+<script>
+  // Mobile menu toggle. The 6-item nav does not fit a phone header, so IA v1
+  // called for a hamburger. Hidden on desktop, where the nav renders inline.
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.getElementById('site-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    nav.addEventListener('click', (event) => {
+      const target = event.target;
+      if (target instanceof HTMLElement && target.tagName === 'A') {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+</script>

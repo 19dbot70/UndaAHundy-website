@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+// Road to 99 — the content hub (IA v1: /road-to-99/ = copy + recent videos + blogs + social).
+// Copy source: ../../copy-draft-pages-v1.md section 4.
+// Videos are web-optimized copies of the originals in ../../assets/videos/.
+// Re-encode step: ffmpeg -i <src> -vf "scale=1080:-2" -c:v libx264 -crf 28 -preset slow -b:v 0 -c:a aac -b:a 96k -movflags +faststart <dest>
+const videos = [
+  {
+    src: '/videos/uah-blessed-morning-v2.mp4',
+    poster: '/images/road/uah-blessed-morning-v2-poster.jpg',
+    caption: 'Blessed morning. Where the Road to 99 starts.',
+  },
+  {
+    src: '/videos/uah-pvamu-road-to-99-v1.mp4',
+    poster: '/images/road/uah-pvamu-road-to-99-v1-poster.jpg',
+    caption: 'Took my son to look at his future.',
+  },
+];
+const topics = [
+  'Golf rounds',
+  'Fitness progress',
+  'Equipment reviews',
+  'Practice sessions',
+  'Tournament experiences',
+  'Golf travel',
+  'Honest wins and losses',
+];
+---
+
+<BaseLayout
+  title="The Road to 99 — Unda A Hundy"
+  description="This isn't a highlight reel. It's real golf. Follow the journey toward consistently shooting in the 90s: rounds, fitness, equipment, practice, tournaments, travel, and honest wins and losses."
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">The Road to 99</span>
+      <h1>This isn't a highlight reel.</h1>
+      <p class="lede">It's real golf. Follow my journey as I work toward consistently shooting in the 90s.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="prose prose--center">
+        <p class="statement">This brand started with one golfer. One goal. Break 100.</p>
+        <p>Now the journey is public.</p>
+        <p>
+          Follow the Road to 99 as new content, fitness, golf, apparel and lessons from
+          the course are shared every week.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--soft">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 32px;">You'll find:</h2>
+      <div class="card-grid">
+        {topics.map((topic) => (
+          <div class="card">
+            <h3>{topic}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 40px;">Latest from the Road</h2>
+      <div class="video-grid">
+        {videos.map((video) => (
+          <figure class="video-block">
+            <video controls preload="none" playsinline poster={video.poster}>
+              <source src={video.src} type="video/mp4" />
+              Your browser cannot play this video. <a href={video.src}>Download it instead.</a>
+            </video>
+            <figcaption>{video.caption}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section--soft">
+    <div class="container">
+      <div class="split">
+        <div>
+          <h2>Follow along</h2>
+          <p>
+            Because getting better is more interesting than pretending you've already
+            arrived.
+          </p>
+          <p>
+            New rounds, honest scores, and the work in between. The full library lives
+            on the socials for now, and every post lands here as it goes out.
+          </p>
+        </div>
+        <ul class="link-list">
+          <li><a href="https://instagram.com/undaahundy" rel="noopener">Instagram</a></li>
+          <li><a href="https://tiktok.com/@undaahundy" rel="noopener">TikTok</a></li>
+          <li><a href="https://facebook.com/undaahundy" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="container">
+      <h2>Get on the list.</h2>
+      <p>
+        First drops, behind-the-scenes content, and the occasional bad-round story.
+      </p>
+      <div class="btn-row" style="justify-content: center;">
+        <a
+          class="btn btn--primary"
+          href="mailto:hello@undaahundy.com?subject=Put%20me%20on%20the%20UAH%20list"
+        >
+          Join the list
+        </a>
+        <a class="btn btn--ghost" href="/break-100-club">Break 100 Club</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
